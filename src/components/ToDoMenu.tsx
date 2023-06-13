@@ -47,7 +47,7 @@ export default function ToDoMenu({
 
   const toggleMenu = () => setIsMenuOpen((prev) => !prev);
   const deleteTodo = () => {
-    setTodos((prev) => prev.filter((item) => item.id != todoId));
+    setTodos((prev) => prev.filter((item) => item.id !== todoId));
   };
   const moveTodo = () => {
     setTodos((prev) => {
