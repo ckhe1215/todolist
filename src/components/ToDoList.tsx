@@ -1,5 +1,7 @@
 import React from "react";
 import { styled } from "styled-components";
+import ToDos from "./ToDos";
+import CreateToDo from "./CreateToDo";
 
 const Wrapper = styled.div`
   padding: 20px;
@@ -8,10 +10,8 @@ const Wrapper = styled.div`
 export default function ToDoList() {
   return (
     <Wrapper>
-      <form>
-        <input type="text" placeholder="add new todo" />
-        <button>add</button>
-      </form>
+      <CreateToDo />
+      <ToDos />
     </Wrapper>
   );
 }
