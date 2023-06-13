@@ -2,6 +2,7 @@ import React from "react";
 import { useRecoilValue } from "recoil";
 import { styled } from "styled-components";
 import { currentTodoState } from "../atoms";
+import ToDoMenu from "./ToDoMenu";
 
 const Wrapper = styled.div`
   margin-top: 20px;
@@ -20,7 +21,10 @@ export default function ToDos() {
   return (
     <Wrapper>
       {todos.map((item) => (
-        <Card key={item.text}>{item.text}</Card>
+        <Card key={item.id}>
+          {item.text}
+          <ToDoMenu todoId={item.id} todoText={item.text} />
+        </Card>
       ))}
     </Wrapper>
   );

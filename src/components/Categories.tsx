@@ -2,6 +2,7 @@ import React from "react";
 import { useRecoilState, useRecoilValue } from "recoil";
 import { styled } from "styled-components";
 import { categoryState, currentCategoryState } from "../atoms";
+import CreateCategory from "./CreateCategory";
 
 const Aside = styled.aside`
   width: 250px;
@@ -48,6 +49,7 @@ export default function Categories() {
           )
         )}
       </List>
+      <CreateCategory />
     </Aside>
   );
 }

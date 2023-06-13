@@ -1,6 +1,6 @@
 import { atom, selector } from "recoil";
 
-interface IToDo {
+export interface IToDo {
   id: number;
   text: string;
   category: string;
